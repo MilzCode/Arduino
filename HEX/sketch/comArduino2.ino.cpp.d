@@ -1,5 +1,5 @@
-C:\Users\brsmi\OneDrive\Documentos\Arduino\HEX\sketch\TestArduino.ino.cpp.o: \
- C:\Users\brsmi\OneDrive\Documentos\Arduino\HEX\sketch\TestArduino.ino.cpp \
+C:\Users\brsmi\OneDrive\Documentos\Arduino\HEX\sketch\comArduino2.ino.cpp.o: \
+ C:\Users\brsmi\OneDrive\Documentos\Arduino\HEX\sketch\comArduino2.ino.cpp \
  C:\Program\ Files\arduino-1.8.19-windows\arduino-1.8.19\hardware\arduino\avr\cores\arduino/Arduino.h \
  C:\Program\ Files\arduino-1.8.19-windows\arduino-1.8.19\hardware\arduino\avr\cores\arduino/binary.h \
  C:\Program\ Files\arduino-1.8.19-windows\arduino-1.8.19\hardware\arduino\avr\cores\arduino/WCharacter.h \

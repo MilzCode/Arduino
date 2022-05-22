@@ -1,6 +1,6 @@
-# 1 "C:\\Users\\brsmi\\OneDrive\\Documentos\\Arduino\\TestArduino\\TestArduino.ino"
-# 2 "C:\\Users\\brsmi\\OneDrive\\Documentos\\Arduino\\TestArduino\\TestArduino.ino" 2
-SoftwareSerial SerialEsp(8, 7); // //pines que conectan a (Tx,RX) del otro dispositivo
+# 1 "C:\\Users\\brsmi\\OneDrive\\Documentos\\Arduino\\Comunicacion bidireccional arduino esp01\\comArduino2\\comArduino2.ino"
+# 2 "C:\\Users\\brsmi\\OneDrive\\Documentos\\Arduino\\Comunicacion bidireccional arduino esp01\\comArduino2\\comArduino2.ino" 2
+SoftwareSerial SerialEsp(7, 8); // //pines que conectan a (Tx,RX) del otro dispositivo
 
 String data;
 

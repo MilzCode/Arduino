@@ -1,21 +1,21 @@
 #include <Arduino.h>
-#line 1 "C:\\Users\\brsmi\\OneDrive\\Documentos\\Arduino\\TestArduino\\TestArduino.ino"
+#line 1 "C:\\Users\\brsmi\\OneDrive\\Documentos\\Arduino\\Comunicacion bidireccional arduino esp01\\comArduino2\\comArduino2.ino"
 #include <SoftwareSerial.h>
-SoftwareSerial SerialEsp(8, 7); // //pines que conectan a (Tx,RX) del otro dispositivo
+SoftwareSerial SerialEsp(7, 8); // //pines que conectan a (Tx,RX) del otro dispositivo
 
 String data;
 
 
 
-#line 8 "C:\\Users\\brsmi\\OneDrive\\Documentos\\Arduino\\TestArduino\\TestArduino.ino"
+#line 8 "C:\\Users\\brsmi\\OneDrive\\Documentos\\Arduino\\Comunicacion bidireccional arduino esp01\\comArduino2\\comArduino2.ino"
 void setup();
-#line 18 "C:\\Users\\brsmi\\OneDrive\\Documentos\\Arduino\\TestArduino\\TestArduino.ino"
+#line 18 "C:\\Users\\brsmi\\OneDrive\\Documentos\\Arduino\\Comunicacion bidireccional arduino esp01\\comArduino2\\comArduino2.ino"
 void loop();
-#line 30 "C:\\Users\\brsmi\\OneDrive\\Documentos\\Arduino\\TestArduino\\TestArduino.ino"
+#line 30 "C:\\Users\\brsmi\\OneDrive\\Documentos\\Arduino\\Comunicacion bidireccional arduino esp01\\comArduino2\\comArduino2.ino"
 void sayBtn1();
-#line 36 "C:\\Users\\brsmi\\OneDrive\\Documentos\\Arduino\\TestArduino\\TestArduino.ino"
+#line 36 "C:\\Users\\brsmi\\OneDrive\\Documentos\\Arduino\\Comunicacion bidireccional arduino esp01\\comArduino2\\comArduino2.ino"
 void checkSerialComunication();
-#line 8 "C:\\Users\\brsmi\\OneDrive\\Documentos\\Arduino\\TestArduino\\TestArduino.ino"
+#line 8 "C:\\Users\\brsmi\\OneDrive\\Documentos\\Arduino\\Comunicacion bidireccional arduino esp01\\comArduino2\\comArduino2.ino"
 void setup()
 {
   Serial.begin(115200);

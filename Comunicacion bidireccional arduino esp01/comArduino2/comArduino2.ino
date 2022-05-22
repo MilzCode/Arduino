@@ -1,5 +1,5 @@
 #include <SoftwareSerial.h>
-SoftwareSerial SerialEsp(8, 7); // //pines que conectan a (Tx,RX) del otro dispositivo
+SoftwareSerial SerialEsp(7, 8); // //pines que conectan a (Tx,RX) del otro dispositivo
 
 String data;
 
