@@ -1,62 +1,34 @@
-#include <SoftwareSerial.h>
 #define GPIO0 0
 #define GPIO2 2
 #define TX 1
 #define RX 3
-SoftwareSerial SerialArduino(GPIO2, GPIO0);
 
-String data;
+unsigned long currentTime = 0;
+unsigned long lasTime1 = 0;
+unsigned long lasTime2 = 0;
+bool led1State = false;
+bool led2State = false;
 
 void setup()
 {
-  Serial.begin(115200);
-  SerialArduino.begin(9600);
-  SerialArduino.print("5...");
-  delay(1000);
-  SerialArduino.print("4...");
-  delay(1000);
-  SerialArduino.print("3...");
-  delay(1000);
-  SerialArduino.print("2...");
-  delay(1000);
-  SerialArduino.print("1...");
-  delay(1000);
-  SerialArduino.print("Go!");
+  Serial.begin(9600);
+  pinMode(GPIO0, OUTPUT);
+  pinMode(GPIO2, OUTPUT);
 }
 
 void loop()
 {
-  checkSerialComunication();
-  delay(500);
-  if (data.length() > 0)
+  currentTime = millis();
+  if (currentTime - lasTime1 > 1000)
   {
-    Serial.println("Recibido: " + data);
-    if (data.indexOf("Desde Arduino") != -1)
-    {
-      SerialArduino.print("Recibido :D (ESP)");
-    }
-    data = "";
-    SerialArduino.print("Desde ESP");
+    led1State = !led1State;
+    digitalWrite(GPIO0, led1State);
+    lasTime1 = currentTime;
+  }
+  if (currentTime - lasTime2 > 2000)
+  {
+    led2State = !led2State;
+    digitalWrite(GPIO2, led2State);
+    lasTime2 = currentTime;
   }
 }
-
-void checkSerialComunication()
-{
-
-  if (SerialArduino.available() > 0)
-  {
-    while (SerialArduino.available() > 0)
-    {
-      data += (char)SerialArduino.read();
-    }
-  }
-}
-
-/*
-Loop Basico:
-  void loop()
-  {
-    SerialArduino.print("Desde ESP");
-    delay(1000);
-  }
-*/
