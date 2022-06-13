@@ -45,6 +45,7 @@ const char index_html[] PROGMEM = R"rawliteral(<!DOCTYPE html>
 				display: flex;
 				justify-content: center;
 				align-items: center;
+				flex-direction: column;
 				background-color: #333;
 				min-height: 75vh;
 			}
@@ -111,9 +112,29 @@ const char index_html[] PROGMEM = R"rawliteral(<!DOCTYPE html>
 				font-size: 2em;
 				font-weight: bold;
 			}
+			.infoIps {
+				color: white;
+				font-size: 1em;
+				font-weight: bold;
+				margin-bottom: 1.5em;
+				font-style: italic;
+			}
+			.infoIps span {
+				color: green;
+			}
 		</style>
 	</head>
 	<body>
+		<div class="infoIps">
+			<div>
+				IP_AP:
+				<span>192.168.4.1</span>
+			</div>
+			<div>
+				IP_STA:
+				<span id="ipSta">0.0.0.0</span>
+			</div>
+		</div>
 		<div class="j__container" draggable="false">
 			<div class="j__lscontainer">
 				<div id="lstick" class="j__stick"></div>
@@ -136,10 +157,21 @@ const char index_html[] PROGMEM = R"rawliteral(<!DOCTYPE html>
 			</div>
 		</div>
 		<script>
+			let ipSta = '0.0.0.0';
+			let infoIpSta = document.getElementById('ipSta');
 			let gateway = `ws://${window.location.hostname}/ws`;
 			let websocket = new WebSocket(gateway);
 			websocket.onmessage = function (event) {
 				console.log(event.data);
+				if (event.data.includes('STA_IP')) {
+					ipSta = event.data.split(';')[1].split('STA_IP:')[1];
+					infoIpSta.innerHTML = ipSta;
+					if (ipSta === '0.0.0.0') {
+						infoIpSta.style.color = 'red';
+					} else {
+						infoIpSta.style.color = 'green';
+					}
+				}
 			};
 			function sendMsg(msg) {
 				if (!websocket.readyState) {
