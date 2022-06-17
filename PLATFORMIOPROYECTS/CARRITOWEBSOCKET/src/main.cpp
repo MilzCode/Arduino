@@ -3,7 +3,6 @@
 #include <ESPAsyncTCP.h>
 #include <ESPAsyncWebServer.h>
 
-
 #define GPIO0 0
 #define GPIO2 2
 #define TX 1
@@ -418,19 +417,15 @@ String processor(const String &var)
 
 void setup()
 {
-
-  // PINMODES
-  pinMode(GPIO0, OUTPUT);
-  digitalWrite(GPIO0, false);
-
-  pinMode(GPIO2, OUTPUT);
-  digitalWrite(GPIO2, false);
-
-  pinMode(RX, OUTPUT);
-  digitalWrite(RX, false);
-
   pinMode(TX, OUTPUT);
+  pinMode(RX, OUTPUT);
+  pinMode(GPIO0, OUTPUT);
+  pinMode(GPIO2, OUTPUT);
+
   digitalWrite(TX, false);
+  digitalWrite(RX, false);
+  digitalWrite(GPIO0, false);
+  digitalWrite(GPIO2, false);
 
   // Serial.begin(115200);
   WiFi.mode(WIFI_AP_STA);
