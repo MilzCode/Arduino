@@ -1,0 +1,20 @@
+C:\Users\brsmi\OneDrive\Documentos\Arduino\HEX\libraries\Adafruit_MCP4725\Adafruit_MCP4725.cpp.o: \
+ C:\Users\brsmi\OneDrive\Documentos\Arduino\libraries\Adafruit_MCP4725\Adafruit_MCP4725.cpp \
+ C:\Users\brsmi\OneDrive\Documentos\Arduino\libraries\Adafruit_MCP4725\Adafruit_MCP4725.h \
+ C:\Users\brsmi\OneDrive\Documentos\Arduino\libraries\Adafruit_BusIO/Adafruit_BusIO_Register.h \
+ C:\Users\brsmi\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.5\cores\arduino/Arduino.h \
+ C:\Users\brsmi\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.5\cores\arduino/binary.h \
+ C:\Users\brsmi\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.5\cores\arduino/WCharacter.h \
+ C:\Users\brsmi\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.5\cores\arduino/WString.h \
+ C:\Users\brsmi\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.5\cores\arduino/HardwareSerial.h \
+ C:\Users\brsmi\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.5\cores\arduino/Stream.h \
+ C:\Users\brsmi\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.5\cores\arduino/Print.h \
+ C:\Users\brsmi\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.5\cores\arduino/Printable.h \
+ C:\Users\brsmi\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.5\cores\arduino/USBAPI.h \
+ C:\Users\brsmi\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.5\cores\arduino/Arduino.h \
+ C:\Users\brsmi\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.5\variants\standard/pins_arduino.h \
+ C:\Users\brsmi\OneDrive\Documentos\Arduino\libraries\Adafruit_BusIO/Adafruit_I2CDevice.h \
+ C:\Users\brsmi\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.5\libraries\Wire\src/Wire.h \
+ C:\Users\brsmi\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.5\cores\arduino/Stream.h \
+ C:\Users\brsmi\OneDrive\Documentos\Arduino\libraries\Adafruit_BusIO/Adafruit_SPIDevice.h \
+ C:\Users\brsmi\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.5\libraries\SPI\src/SPI.h

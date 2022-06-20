@@ -1,39 +1,31 @@
-# 1 "C:\\Users\\brsmi\\OneDrive\\Documentos\\Arduino\\pruebasRandomArduino\\pruebasRandomArduino.ino"
+#include <Arduino.h>
+#line 1 "C:\\Users\\brsmi\\OneDrive\\Documentos\\Arduino\\pruebasRandomArduino\\pruebasRandomArduino.ino"
 /**************************************************************************/
 /*! 
-
     @file     trianglewave.pde
-
     @author   Adafruit Industries
-
     @license  BSD (see license.txt)
-
-
 
     This example will generate a triangle wave with the MCP4725 DAC.   
 
-
-
     This is an example sketch for the Adafruit MCP4725 breakout board
-
     ----> http://www.adafruit.com/products/935
-
  
-
     Adafruit invests time and resources providing this open source code, 
-
     please support Adafruit and open-source hardware by purchasing 
-
     products from Adafruit!
-
 */
-# 16 "C:\\Users\\brsmi\\OneDrive\\Documentos\\Arduino\\pruebasRandomArduino\\pruebasRandomArduino.ino"
 /**************************************************************************/
-# 18 "C:\\Users\\brsmi\\OneDrive\\Documentos\\Arduino\\pruebasRandomArduino\\pruebasRandomArduino.ino" 2
-# 19 "C:\\Users\\brsmi\\OneDrive\\Documentos\\Arduino\\pruebasRandomArduino\\pruebasRandomArduino.ino" 2
+#include <Wire.h>
+#include <Adafruit_MCP4725.h>
 
 Adafruit_MCP4725 dac;
 
+#line 22 "C:\\Users\\brsmi\\OneDrive\\Documentos\\Arduino\\pruebasRandomArduino\\pruebasRandomArduino.ino"
+void setup(void);
+#line 34 "C:\\Users\\brsmi\\OneDrive\\Documentos\\Arduino\\pruebasRandomArduino\\pruebasRandomArduino.ino"
+void loop(void);
+#line 22 "C:\\Users\\brsmi\\OneDrive\\Documentos\\Arduino\\pruebasRandomArduino\\pruebasRandomArduino.ino"
 void setup(void) {
   Serial.begin(9600);
   Serial.println("Hello!");
@@ -42,7 +34,7 @@ void setup(void) {
   // For MCP4725A0 the address is 0x60 or 0x61
   // For MCP4725A2 the address is 0x64 or 0x65
   dac.begin(0x63);
-
+    
   Serial.println("Generating a triangle wave");
 }
 
@@ -58,3 +50,4 @@ void loop(void) {
       dac.setVoltage(counter, false);
     }
 }
+
