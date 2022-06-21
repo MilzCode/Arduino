@@ -1,8 +1,9 @@
 #include <ESP8266WiFi.h>
 #include <ESP8266HTTPClient.h>
 #include <WiFiClientSecure.h>
-#define SSID "VTR-8631326"
-#define PASS "cdJqkmxV7ddk"
+#define SSID "NOMBREDERED"
+#define PASS "CONTRASEÑADERED"
+// IP o Direccion de servidor al que se le haran las peticiones
 #define HOST "https://apimocha.com/esptest"
 
 String requestData(String Type, String host, String route = "", String query = "")
