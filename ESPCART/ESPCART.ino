@@ -420,10 +420,7 @@ void setup()
   pinMode(GPIO0, OUTPUT);
   pinMode(GPIO2, OUTPUT);
 
-  digitalWrite(TX, false);
-  digitalWrite(RX, false);
-  digitalWrite(GPIO0, false);
-  digitalWrite(GPIO2, false);
+
 
   // Serial.begin(115200);
   WiFi.mode(WIFI_AP_STA);
@@ -449,11 +446,19 @@ void setup()
       break;
     }
   }
+    digitalWrite(TX, LOW);
+  digitalWrite(RX, LOW);
+  digitalWrite(GPIO0, LOW);
+  digitalWrite(GPIO2, LOW);
 
   initWebSocket();
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send_P(200, "text/html", index_html, processor); });
   server.begin();
+    digitalWrite(TX, LOW);
+  digitalWrite(RX, LOW);
+  digitalWrite(GPIO0, LOW);
+  digitalWrite(GPIO2, LOW);
 }
 
 void loop()
